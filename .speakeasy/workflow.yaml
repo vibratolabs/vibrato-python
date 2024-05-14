@@ -1,0 +1,9 @@
+workflowVersion: 1.0.0
+sources:
+    vibrato-pub-api:
+        inputs:
+            - location: ../vibrato/vibrato/openapi/public_api.yaml
+targets:
+    my-first-target:
+        target: python
+        source: vibrato-pub-api
