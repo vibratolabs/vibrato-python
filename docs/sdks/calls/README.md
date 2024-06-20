@@ -59,7 +59,7 @@ s = vibrato.Vibrato(
 
 
 res = s.calls.create_call(request=components.CallInput(
-    country_code='PF',
+    country_code='1',
     phone_number='<value>',
     prompt='<value>',
 ))
@@ -140,7 +140,7 @@ s = vibrato.Vibrato(
 
 
 res = s.calls.update_call(id='<value>', call=components.CallInput(
-    country_code='RS',
+    country_code='1',
     phone_number='<value>',
     prompt='<value>',
 ))

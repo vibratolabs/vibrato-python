@@ -1,4 +1,4 @@
-# vibrato-python
+# vibrato-python (Beta)
 
 <div align="left">
     <a href="https://speakeasyapi.dev/"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
@@ -7,20 +7,11 @@
     </a>
 </div>
 
-
-## 🏗 **Welcome to your new SDK!** 🏗
-
-It has been generated successfully based on your OpenAPI spec. However, it is not yet ready for production use. Here are some next steps:
-- [ ] 🛠 Make your SDK feel handcrafted by [customizing it](https://www.speakeasyapi.dev/docs/customize-sdks)
-- [ ] ♻️ Refine your SDK quickly by iterating locally with the [Speakeasy CLI](https://github.com/speakeasy-api/speakeasy)
-- [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/advanced-setup/publish-sdks)
-- [ ] ✨ When ready to productionize, delete this section from the README
-
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 ```bash
-pip install git+<UNSET>.git
+pip install git+https://github.com/vibratolabs/vibrato-python.git@main
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -51,13 +42,13 @@ if res.call_list is not None:
 
 ### [calls](docs/sdks/calls/README.md)
 
-* [list_calls](docs/sdks/calls/README.md#list_calls) - List all calls
-* [create_call](docs/sdks/calls/README.md#create_call) - Create a new call
-* [retrieve_call](docs/sdks/calls/README.md#retrieve_call) - Retrieve a specific call
-* [update_call](docs/sdks/calls/README.md#update_call) - Update an existing call
-* [delete_call](docs/sdks/calls/README.md#delete_call) - Delete a specific call
-* [end_call](docs/sdks/calls/README.md#end_call) - End a specific call
-* [get_transcript](docs/sdks/calls/README.md#get_transcript) - Get transcript for a specific call
+- [list_calls](docs/sdks/calls/README.md#list_calls) - List all calls
+- [create_call](docs/sdks/calls/README.md#create_call) - Create a new call
+- [retrieve_call](docs/sdks/calls/README.md#retrieve_call) - Retrieve a specific call
+- [update_call](docs/sdks/calls/README.md#update_call) - Update an existing call
+- [delete_call](docs/sdks/calls/README.md#delete_call) - Delete a specific call
+- [end_call](docs/sdks/calls/README.md#end_call) - End a specific call
+- [get_transcript](docs/sdks/calls/README.md#get_transcript) - Get transcript for a specific call
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Error Handling [errors] -->
@@ -124,10 +115,10 @@ if res.call_list is not None:
 
 ```
 
-
 ### Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
+
 ```python
 import vibrato
 
@@ -152,6 +143,7 @@ if res.call_list is not None:
 The Python SDK makes API calls using the [requests](https://pypi.org/project/requests/) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
 
 For example, you could specify a header for every request that this sdk makes as follows:
+
 ```python
 import vibrato
 import requests
@@ -174,6 +166,7 @@ This SDK supports the following security scheme globally:
 | `bearer_auth` | http          | HTTP Bearer   |
 
 To authenticate with the API the `bearer_auth` parameter must be set when initializing the SDK client instance. For example:
+
 ```python
 import vibrato
 
