@@ -4,12 +4,14 @@ from __future__ import annotations
 import dataclasses
 from ...models.components import call as components_call
 from ...models.components import httpmetadata as components_httpmetadata
+from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 
 
+@dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CreateCallResponse:
-    http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field()
+    http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field(metadata={'dataclasses_json': { 'exclude': lambda f: True }})
     call: Optional[components_call.Call] = dataclasses.field(default=None)
     r"""The created call."""
     

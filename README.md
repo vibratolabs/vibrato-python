@@ -36,6 +36,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.list_calls()
 
 if res.call_list is not None:
@@ -81,6 +82,7 @@ s = vibrato.Vibrato(
 res = None
 try:
     res = s.calls.list_calls()
+
 except errors.SDKError as e:
     # handle exception
     raise(e)
@@ -113,6 +115,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.list_calls()
 
 if res.call_list is not None:
@@ -132,6 +135,7 @@ s = vibrato.Vibrato(
     server_url="https://api.getvibrato.com/api/v1",
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
+
 
 res = s.calls.list_calls()
 
@@ -176,6 +180,7 @@ import vibrato
 s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
+
 
 res = s.calls.list_calls()
 

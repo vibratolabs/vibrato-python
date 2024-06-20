@@ -5,6 +5,7 @@ import dataclasses
 from ...models.components import call as components_call
 from ...models.components import call_input as components_call_input
 from ...models.components import httpmetadata as components_httpmetadata
+from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 
 
@@ -16,9 +17,10 @@ class UpdateCallRequest:
 
 
 
+@dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class UpdateCallResponse:
-    http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field()
+    http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field(metadata={'dataclasses_json': { 'exclude': lambda f: True }})
     call: Optional[components_call.Call] = dataclasses.field(default=None)
     r"""The updated call."""
     

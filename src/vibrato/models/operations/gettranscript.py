@@ -4,6 +4,7 @@ from __future__ import annotations
 import dataclasses
 from ...models.components import httpmetadata as components_httpmetadata
 from ...models.components import transcript as components_transcript
+from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 
 
@@ -14,9 +15,10 @@ class GetTranscriptRequest:
 
 
 
+@dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class GetTranscriptResponse:
-    http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field()
+    http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field(metadata={'dataclasses_json': { 'exclude': lambda f: True }})
     transcript: Optional[components_transcript.Transcript] = dataclasses.field(default=None)
     r"""Transcript of the call."""
     

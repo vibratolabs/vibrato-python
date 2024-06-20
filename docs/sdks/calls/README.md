@@ -24,6 +24,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.list_calls()
 
 if res.call_list is not None:
@@ -55,6 +56,7 @@ from vibrato.models import components
 s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
+
 
 res = s.calls.create_call(request=components.CallInput(
     country_code='PF',
@@ -97,6 +99,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.retrieve_call(id='<value>')
 
 if res.call is not None:
@@ -134,6 +137,7 @@ from vibrato.models import components
 s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
+
 
 res = s.calls.update_call(id='<value>', call=components.CallInput(
     country_code='RS',
@@ -177,6 +181,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.delete_call(id='<value>')
 
 if res is not None:
@@ -214,6 +219,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.end_call(id='<value>')
 
 if res.call is not None:
@@ -250,6 +256,7 @@ import vibrato
 s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
+
 
 res = s.calls.get_transcript(id='<value>')
 

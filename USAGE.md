@@ -6,6 +6,7 @@ s = vibrato.Vibrato(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
+
 res = s.calls.list_calls()
 
 if res.call_list is not None:
