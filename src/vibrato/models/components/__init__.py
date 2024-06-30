@@ -5,7 +5,11 @@ from .call_input import *
 from .calllist import *
 from .httpmetadata import *
 from .security import *
+from .tasktemplate import *
+from .tasktemplate_input import *
+from .tasktemplatelist import *
+from .tasktemplateproperty import *
 from .transcript import *
 from .transcriptmessage import *
 
-__all__ = ["Call","CallInput","CallList","HTTPMetadata","Security","Transcript","TranscriptMessage"]
+__all__ = ["Call","CallInput","CallList","HTTPMetadata","Security","TaskTemplate","TaskTemplateInput","TaskTemplateList","TaskTemplateProperty","Transcript","TranscriptMessage"]

@@ -1,28 +1,30 @@
 lockVersion: 2.0.0
 id: 91bdbd90-02f3-42cf-b418-676e9a74d7c5
 management:
-  docChecksum: 77e13b17ad1a2385ff3b0d6192fdab15
+  docChecksum: 483d84a44d75b4f88dab8ca1fc60f829
   docVersion: 0.0.1
-  speakeasyVersion: 1.312.0
-  generationVersion: 2.347.8
-  releaseVersion: 0.0.3
-  configChecksum: 64c2612430aaa93e089aa15381fed952
+  speakeasyVersion: 1.322.3
+  generationVersion: 2.354.2
+  releaseVersion: 0.1.0
+  configChecksum: daf21c51dfdaddab783216109505c40c
 features:
   python:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.3
-    core: 4.6.12
+    core: 4.6.13
     flattening: 2.81.1
     globalSecurity: 2.83.5
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.2
     inputOutputModels: 2.83.1
+    nullables: 0.1.0
     responseFormat: 0.1.0
     sdkHooks: 0.1.0
 generatedFiles:
   - src/vibrato/sdkconfiguration.py
   - src/vibrato/calls.py
+  - src/vibrato/tasktemplates.py
   - src/vibrato/sdk.py
   - py.typed
   - pylintrc
@@ -40,12 +42,22 @@ generatedFiles:
   - src/vibrato/models/operations/deletecall.py
   - src/vibrato/models/operations/endcall.py
   - src/vibrato/models/operations/gettranscript.py
+  - src/vibrato/models/operations/listtasktemplates.py
+  - src/vibrato/models/operations/createtasktemplate.py
+  - src/vibrato/models/operations/retrievetasktemplate.py
+  - src/vibrato/models/operations/updatetasktemplate.py
+  - src/vibrato/models/operations/deletetasktemplate.py
+  - src/vibrato/models/operations/createtasktemplatefromcall.py
   - src/vibrato/models/components/calllist.py
   - src/vibrato/models/components/call.py
   - src/vibrato/models/components/httpmetadata.py
   - src/vibrato/models/components/call_input.py
   - src/vibrato/models/components/transcript.py
   - src/vibrato/models/components/transcriptmessage.py
+  - src/vibrato/models/components/tasktemplatelist.py
+  - src/vibrato/models/components/tasktemplate.py
+  - src/vibrato/models/components/tasktemplateproperty.py
+  - src/vibrato/models/components/tasktemplate_input.py
   - src/vibrato/models/components/security.py
   - src/vibrato/models/__init__.py
   - src/vibrato/models/errors/__init__.py
@@ -63,15 +75,30 @@ generatedFiles:
   - docs/models/operations/endcallresponse.md
   - docs/models/operations/gettranscriptrequest.md
   - docs/models/operations/gettranscriptresponse.md
+  - docs/models/operations/listtasktemplatesresponse.md
+  - docs/models/operations/createtasktemplateresponse.md
+  - docs/models/operations/retrievetasktemplaterequest.md
+  - docs/models/operations/retrievetasktemplateresponse.md
+  - docs/models/operations/updatetasktemplaterequest.md
+  - docs/models/operations/updatetasktemplateresponse.md
+  - docs/models/operations/deletetasktemplaterequest.md
+  - docs/models/operations/deletetasktemplateresponse.md
+  - docs/models/operations/createtasktemplatefromcallrequestbody.md
+  - docs/models/operations/createtasktemplatefromcallresponse.md
   - docs/models/components/calllist.md
   - docs/models/components/call.md
   - docs/models/components/httpmetadata.md
   - docs/models/components/callinput.md
   - docs/models/components/transcript.md
   - docs/models/components/transcriptmessage.md
+  - docs/models/components/tasktemplatelist.md
+  - docs/models/components/tasktemplate.md
+  - docs/models/components/tasktemplateproperty.md
+  - docs/models/components/tasktemplateinput.md
   - docs/models/components/security.md
   - docs/sdks/vibrato/README.md
   - docs/sdks/calls/README.md
+  - docs/sdks/tasktemplates/README.md
   - USAGE.md
   - .gitattributes
   - src/vibrato/_hooks/sdkhooks.py

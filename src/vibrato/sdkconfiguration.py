@@ -24,9 +24,9 @@ class SDKConfiguration:
     server_idx: Optional[int] = 0
     language: str = 'python'
     openapi_doc_version: str = '0.0.1'
-    sdk_version: str = '0.0.3'
-    gen_version: str = '2.347.8'
-    user_agent: str = 'speakeasy-sdk/python 0.0.3 2.347.8 0.0.1 vibrato-python'
+    sdk_version: str = '0.1.0'
+    gen_version: str = '2.354.2'
+    user_agent: str = 'speakeasy-sdk/python 0.1.0 2.354.2 0.0.1 vibrato-python'
     retry_config: Optional[RetryConfig] = None
 
     def __post_init__(self):

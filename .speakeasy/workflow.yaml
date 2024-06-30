@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     vibrato-pub-api:
         inputs:
-            - location: ../vibrato/vibrato/openapi/public_api.yaml
+            - location: ../vibrato-app/vibrato/openapi/public_api.yaml
         registry:
             location: registry.speakeasyapi.dev/vibrato-cd9/vibrato-2/vibrato-pub-api
 targets:

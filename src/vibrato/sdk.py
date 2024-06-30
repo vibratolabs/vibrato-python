@@ -3,6 +3,7 @@
 import requests as requests_http
 from .calls import Calls
 from .sdkconfiguration import SDKConfiguration
+from .tasktemplates import TaskTemplates
 from .utils.retries import RetryConfig
 from typing import Callable, Dict, Optional, Union
 from vibrato import utils
@@ -12,6 +13,7 @@ from vibrato.models import components
 class Vibrato:
     r"""Call API: API for managing calls."""
     calls: Calls
+    task_templates: TaskTemplates
 
     sdk_configuration: SDKConfiguration
 
@@ -75,3 +77,4 @@ class Vibrato:
 
     def _init_sdks(self):
         self.calls = Calls(self.sdk_configuration)
+        self.task_templates = TaskTemplates(self.sdk_configuration)

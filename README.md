@@ -11,7 +11,7 @@
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/vibratolabs/vibrato-python.git@main
+pip install git+<UNSET>.git
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -42,13 +42,22 @@ if res.call_list is not None:
 
 ### [calls](docs/sdks/calls/README.md)
 
-- [list_calls](docs/sdks/calls/README.md#list_calls) - List all calls
-- [create_call](docs/sdks/calls/README.md#create_call) - Create a new call
-- [retrieve_call](docs/sdks/calls/README.md#retrieve_call) - Retrieve a specific call
-- [update_call](docs/sdks/calls/README.md#update_call) - Update an existing call
-- [delete_call](docs/sdks/calls/README.md#delete_call) - Delete a specific call
-- [end_call](docs/sdks/calls/README.md#end_call) - End a specific call
-- [get_transcript](docs/sdks/calls/README.md#get_transcript) - Get transcript for a specific call
+* [list_calls](docs/sdks/calls/README.md#list_calls) - List all calls
+* [create_call](docs/sdks/calls/README.md#create_call) - Create a new call
+* [retrieve_call](docs/sdks/calls/README.md#retrieve_call) - Retrieve a specific call
+* [update_call](docs/sdks/calls/README.md#update_call) - Update an existing call
+* [delete_call](docs/sdks/calls/README.md#delete_call) - Delete a specific call
+* [end_call](docs/sdks/calls/README.md#end_call) - End a specific call
+* [get_transcript](docs/sdks/calls/README.md#get_transcript) - Get transcript for a specific call
+
+### [task_templates](docs/sdks/tasktemplates/README.md)
+
+* [list_task_templates](docs/sdks/tasktemplates/README.md#list_task_templates) - List all task templates
+* [create_task_template](docs/sdks/tasktemplates/README.md#create_task_template) - Create a new task template
+* [retrieve_task_template](docs/sdks/tasktemplates/README.md#retrieve_task_template) - Retrieve a specific task template
+* [update_task_template](docs/sdks/tasktemplates/README.md#update_task_template) - Update an existing task template
+* [delete_task_template](docs/sdks/tasktemplates/README.md#delete_task_template) - Delete a specific task template
+* [create_task_template_from_call](docs/sdks/tasktemplates/README.md#create_task_template_from_call) - Create a task template from a call
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Error Handling [errors] -->
@@ -115,10 +124,10 @@ if res.call_list is not None:
 
 ```
 
+
 ### Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
-
 ```python
 import vibrato
 
@@ -143,7 +152,6 @@ if res.call_list is not None:
 The Python SDK makes API calls using the [requests](https://pypi.org/project/requests/) HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
 
 For example, you could specify a header for every request that this sdk makes as follows:
-
 ```python
 import vibrato
 import requests
@@ -166,7 +174,6 @@ This SDK supports the following security scheme globally:
 | `bearer_auth` | http          | HTTP Bearer   |
 
 To authenticate with the API the `bearer_auth` parameter must be set when initializing the SDK client instance. For example:
-
 ```python
 import vibrato
 
