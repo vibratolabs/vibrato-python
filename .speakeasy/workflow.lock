@@ -2,17 +2,23 @@ speakeasyVersion: 1.322.3
 sources:
     vibrato-pub-api:
         sourceNamespace: vibrato-pub-api
-        sourceRevisionDigest: sha256:b5cbf0ff4220c7b7f07a805175cdf053f29b856a3803c7d2893a0f6f713a8e07
+        sourceRevisionDigest: sha256:2e125340f74ea16accf61c4b789dd98c38f29a67810a8c678efc951cd7a18efb
         sourceBlobDigest: sha256:baa1d912969f36ab53642b46ac937f6f817c49e49ecd66d40a67395f13275af0
         tags:
             - latest
 targets:
-    my-first-target:
+    terraform-provider-vibrato:
         source: vibrato-pub-api
         sourceNamespace: vibrato-pub-api
-        sourceRevisionDigest: sha256:b5cbf0ff4220c7b7f07a805175cdf053f29b856a3803c7d2893a0f6f713a8e07
+        sourceRevisionDigest: sha256:2e125340f74ea16accf61c4b789dd98c38f29a67810a8c678efc951cd7a18efb
         sourceBlobDigest: sha256:baa1d912969f36ab53642b46ac937f6f817c49e49ecd66d40a67395f13275af0
-        outLocation: /Users/david/src/vibratolabs/vibrato-python
+        outLocation: ../terraform-provider-vibrato
+    vibrato-python:
+        source: vibrato-pub-api
+        sourceNamespace: vibrato-pub-api
+        sourceRevisionDigest: sha256:2e125340f74ea16accf61c4b789dd98c38f29a67810a8c678efc951cd7a18efb
+        sourceBlobDigest: sha256:baa1d912969f36ab53642b46ac937f6f817c49e49ecd66d40a67395f13275af0
+        outLocation: .
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -23,6 +29,11 @@ workflow:
             registry:
                 location: registry.speakeasyapi.dev/vibrato-cd9/vibrato-2/vibrato-pub-api
     targets:
-        my-first-target:
+        terraform-provider-vibrato:
+            target: terraform
+            source: vibrato-pub-api
+            output: ../terraform-provider-vibrato
+        vibrato-python:
             target: python
             source: vibrato-pub-api
+            output: .

@@ -7,6 +7,11 @@ sources:
         registry:
             location: registry.speakeasyapi.dev/vibrato-cd9/vibrato-2/vibrato-pub-api
 targets:
-    my-first-target:
+    vibrato-python:
         target: python
         source: vibrato-pub-api
+        output: .
+    terraform-provider-vibrato:
+        target: terraform
+        source: vibrato-pub-api
+        output: ../terraform-provider-vibrato
