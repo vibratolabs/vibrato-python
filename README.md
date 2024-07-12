@@ -58,6 +58,14 @@ if res.call_list is not None:
 * [update_task_template](docs/sdks/tasktemplates/README.md#update_task_template) - Update an existing task template
 * [delete_task_template](docs/sdks/tasktemplates/README.md#delete_task_template) - Delete a specific task template
 * [create_task_template_from_call](docs/sdks/tasktemplates/README.md#create_task_template_from_call) - Create a task template from a call
+
+### [campaigns](docs/sdks/campaigns/README.md)
+
+* [list_campaigns](docs/sdks/campaigns/README.md#list_campaigns) - List all campaigns
+* [create_campaign](docs/sdks/campaigns/README.md#create_campaign) - Create a new campaign
+* [retrieve_campaign](docs/sdks/campaigns/README.md#retrieve_campaign) - Retrieve a specific campaign
+* [update_campaign](docs/sdks/campaigns/README.md#update_campaign) - Update an existing campaign
+* [delete_campaign](docs/sdks/campaigns/README.md#delete_campaign) - Delete a specific campaign
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Error Handling [errors] -->

@@ -2,6 +2,7 @@
 
 import requests as requests_http
 from .calls import Calls
+from .campaigns import Campaigns
 from .sdkconfiguration import SDKConfiguration
 from .tasktemplates import TaskTemplates
 from .utils.retries import RetryConfig
@@ -14,6 +15,7 @@ class Vibrato:
     r"""Call API: API for managing calls."""
     calls: Calls
     task_templates: TaskTemplates
+    campaigns: Campaigns
 
     sdk_configuration: SDKConfiguration
 
@@ -78,3 +80,4 @@ class Vibrato:
     def _init_sdks(self):
         self.calls = Calls(self.sdk_configuration)
         self.task_templates = TaskTemplates(self.sdk_configuration)
+        self.campaigns = Campaigns(self.sdk_configuration)

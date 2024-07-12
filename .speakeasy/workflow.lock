@@ -1,9 +1,9 @@
-speakeasyVersion: 1.322.3
+speakeasyVersion: 1.335.0
 sources:
     vibrato-pub-api:
         sourceNamespace: vibrato-pub-api
-        sourceRevisionDigest: sha256:2e125340f74ea16accf61c4b789dd98c38f29a67810a8c678efc951cd7a18efb
-        sourceBlobDigest: sha256:baa1d912969f36ab53642b46ac937f6f817c49e49ecd66d40a67395f13275af0
+        sourceRevisionDigest: sha256:41c1b60592ed528978f863dcf16a32069d1e4e934837624ecb150f2f25ad2735
+        sourceBlobDigest: sha256:e88f015c1a0a712a28e8b3d26a95ef20090dc7112a36d1b699e44887b88571c3
         tags:
             - latest
 targets:
@@ -16,8 +16,8 @@ targets:
     vibrato-python:
         source: vibrato-pub-api
         sourceNamespace: vibrato-pub-api
-        sourceRevisionDigest: sha256:2e125340f74ea16accf61c4b789dd98c38f29a67810a8c678efc951cd7a18efb
-        sourceBlobDigest: sha256:baa1d912969f36ab53642b46ac937f6f817c49e49ecd66d40a67395f13275af0
+        sourceRevisionDigest: sha256:41c1b60592ed528978f863dcf16a32069d1e4e934837624ecb150f2f25ad2735
+        sourceBlobDigest: sha256:e88f015c1a0a712a28e8b3d26a95ef20090dc7112a36d1b699e44887b88571c3
         outLocation: .
 workflow:
     workflowVersion: 1.0.0

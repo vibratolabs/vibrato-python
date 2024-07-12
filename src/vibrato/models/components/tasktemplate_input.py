@@ -21,5 +21,8 @@ class TaskTemplateInput:
     recipient_country_code: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recipient_country_code'), 'exclude': lambda f: f is TaskTemplateInput.UNSET }})
     call_locale: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('call_locale'), 'exclude': lambda f: f is None }})
     public: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('public'), 'exclude': lambda f: f is None }})
+    featured: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('featured'), 'exclude': lambda f: f is None }})
+    tags: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is TaskTemplateInput.UNSET }})
+    iconoir_icon: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('iconoir_icon'), 'exclude': lambda f: f is TaskTemplateInput.UNSET }})
     
 
