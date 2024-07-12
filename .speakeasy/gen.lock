@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4917d4dd-5e68-4d79-a8a3-8b030c2718fc
 management:
-  docChecksum: 44881bfad126b922fb084562703d9072
+  docChecksum: 298b83a152f2423d6b63bc19f8e745fd
   docVersion: 0.0.1
   speakeasyVersion: 1.335.0
   generationVersion: 2.370.2
-  releaseVersion: 0.1.0
-  configChecksum: ebdd973edf37f27ab825bb580986dc89
+  releaseVersion: 0.1.1
+  configChecksum: 02712c5c5b3595791266bf1e50bd7967
 features:
   python:
     additionalDependencies: 0.1.0
@@ -26,6 +26,7 @@ generatedFiles:
   - src/vibrato/calls.py
   - src/vibrato/tasktemplates.py
   - src/vibrato/campaigns.py
+  - src/vibrato/contacts.py
   - src/vibrato/sdk.py
   - py.typed
   - pylintrc
@@ -54,6 +55,11 @@ generatedFiles:
   - src/vibrato/models/operations/retrievecampaign.py
   - src/vibrato/models/operations/updatecampaign.py
   - src/vibrato/models/operations/deletecampaign.py
+  - src/vibrato/models/operations/listcontacts.py
+  - src/vibrato/models/operations/createcontact.py
+  - src/vibrato/models/operations/retrievecontact.py
+  - src/vibrato/models/operations/updatecontact.py
+  - src/vibrato/models/operations/deletecontact.py
   - src/vibrato/models/components/calllist.py
   - src/vibrato/models/components/call.py
   - src/vibrato/models/components/httpmetadata.py
@@ -68,6 +74,10 @@ generatedFiles:
   - src/vibrato/models/components/campaign.py
   - src/vibrato/models/components/dailyavailability.py
   - src/vibrato/models/components/campaign_input.py
+  - src/vibrato/models/components/contactlist.py
+  - src/vibrato/models/components/contact.py
+  - src/vibrato/models/components/campaigncall.py
+  - src/vibrato/models/components/campaigncall_input.py
   - src/vibrato/models/components/security.py
   - src/vibrato/models/__init__.py
   - src/vibrato/models/errors/__init__.py
@@ -103,6 +113,14 @@ generatedFiles:
   - docs/models/operations/updatecampaignresponse.md
   - docs/models/operations/deletecampaignrequest.md
   - docs/models/operations/deletecampaignresponse.md
+  - docs/models/operations/listcontactsresponse.md
+  - docs/models/operations/createcontactresponse.md
+  - docs/models/operations/retrievecontactrequest.md
+  - docs/models/operations/retrievecontactresponse.md
+  - docs/models/operations/updatecontactrequest.md
+  - docs/models/operations/updatecontactresponse.md
+  - docs/models/operations/deletecontactrequest.md
+  - docs/models/operations/deletecontactresponse.md
   - docs/models/components/calllist.md
   - docs/models/components/call.md
   - docs/models/components/httpmetadata.md
@@ -118,11 +136,19 @@ generatedFiles:
   - docs/models/components/day.md
   - docs/models/components/dailyavailability.md
   - docs/models/components/campaigninput.md
+  - docs/models/components/contactlist.md
+  - docs/models/components/customfields.md
+  - docs/models/components/validationerrors.md
+  - docs/models/components/contact.md
+  - docs/models/components/campaigncall.md
+  - docs/models/components/contactinput.md
+  - docs/models/components/campaigncallinput.md
   - docs/models/components/security.md
   - docs/sdks/vibrato/README.md
   - docs/sdks/calls/README.md
   - docs/sdks/tasktemplates/README.md
   - docs/sdks/campaigns/README.md
+  - docs/sdks/contacts/README.md
   - USAGE.md
   - .gitattributes
   - src/vibrato/_hooks/sdkhooks.py

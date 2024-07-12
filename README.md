@@ -66,6 +66,14 @@ if res.call_list is not None:
 * [retrieve_campaign](docs/sdks/campaigns/README.md#retrieve_campaign) - Retrieve a specific campaign
 * [update_campaign](docs/sdks/campaigns/README.md#update_campaign) - Update an existing campaign
 * [delete_campaign](docs/sdks/campaigns/README.md#delete_campaign) - Delete a specific campaign
+
+### [contacts](docs/sdks/contacts/README.md)
+
+* [list_contacts](docs/sdks/contacts/README.md#list_contacts) - List all contacts
+* [create_contact](docs/sdks/contacts/README.md#create_contact) - Create a new contact
+* [retrieve_contact](docs/sdks/contacts/README.md#retrieve_contact) - Retrieve a specific contact
+* [update_contact](docs/sdks/contacts/README.md#update_contact) - Update an existing contact
+* [delete_contact](docs/sdks/contacts/README.md#delete_contact) - Delete a specific contact
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Error Handling [errors] -->

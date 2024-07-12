@@ -2,21 +2,26 @@
 
 from .createcall import *
 from .createcampaign import *
+from .createcontact import *
 from .createtasktemplate import *
 from .createtasktemplatefromcall import *
 from .deletecall import *
 from .deletecampaign import *
+from .deletecontact import *
 from .deletetasktemplate import *
 from .endcall import *
 from .gettranscript import *
 from .listcalls import *
 from .listcampaigns import *
+from .listcontacts import *
 from .listtasktemplates import *
 from .retrievecall import *
 from .retrievecampaign import *
+from .retrievecontact import *
 from .retrievetasktemplate import *
 from .updatecall import *
 from .updatecampaign import *
+from .updatecontact import *
 from .updatetasktemplate import *
 
-__all__ = ["CreateCallResponse","CreateCampaignResponse","CreateTaskTemplateFromCallRequestBody","CreateTaskTemplateFromCallResponse","CreateTaskTemplateResponse","DeleteCallRequest","DeleteCallResponse","DeleteCampaignRequest","DeleteCampaignResponse","DeleteTaskTemplateRequest","DeleteTaskTemplateResponse","EndCallRequest","EndCallResponse","GetTranscriptRequest","GetTranscriptResponse","ListCallsResponse","ListCampaignsResponse","ListTaskTemplatesResponse","RetrieveCallRequest","RetrieveCallResponse","RetrieveCampaignRequest","RetrieveCampaignResponse","RetrieveTaskTemplateRequest","RetrieveTaskTemplateResponse","UpdateCallRequest","UpdateCallResponse","UpdateCampaignRequest","UpdateCampaignResponse","UpdateTaskTemplateRequest","UpdateTaskTemplateResponse"]
+__all__ = ["CreateCallResponse","CreateCampaignResponse","CreateContactResponse","CreateTaskTemplateFromCallRequestBody","CreateTaskTemplateFromCallResponse","CreateTaskTemplateResponse","DeleteCallRequest","DeleteCallResponse","DeleteCampaignRequest","DeleteCampaignResponse","DeleteContactRequest","DeleteContactResponse","DeleteTaskTemplateRequest","DeleteTaskTemplateResponse","EndCallRequest","EndCallResponse","GetTranscriptRequest","GetTranscriptResponse","ListCallsResponse","ListCampaignsResponse","ListContactsResponse","ListTaskTemplatesResponse","RetrieveCallRequest","RetrieveCallResponse","RetrieveCampaignRequest","RetrieveCampaignResponse","RetrieveContactRequest","RetrieveContactResponse","RetrieveTaskTemplateRequest","RetrieveTaskTemplateResponse","UpdateCallRequest","UpdateCallResponse","UpdateCampaignRequest","UpdateCampaignResponse","UpdateContactRequest","UpdateContactResponse","UpdateTaskTemplateRequest","UpdateTaskTemplateResponse"]
