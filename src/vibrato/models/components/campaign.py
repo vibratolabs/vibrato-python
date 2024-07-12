@@ -12,6 +12,7 @@ from vibrato import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Campaign:
+    UNSET='__SPEAKEASY_UNSET__'
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     task_property_to_contact_field: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task_property_to_contact_field') }})
     task_template_uuid: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task_template_uuid') }})
@@ -24,5 +25,6 @@ class Campaign:
     completed_campaign_calls: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('completed_campaign_calls'), 'exclude': lambda f: f is None }})
     invalid_campaign_calls: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('invalid_campaign_calls'), 'exclude': lambda f: f is None }})
     in_progress_campaign_calls: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('in_progress_campaign_calls'), 'exclude': lambda f: f is None }})
+    campaign_uuids: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('campaign_uuids'), 'exclude': lambda f: f is Campaign.UNSET }})
     
 

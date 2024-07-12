@@ -12,6 +12,7 @@ from vibrato import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CampaignInput:
+    UNSET='__SPEAKEASY_UNSET__'
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     task_property_to_contact_field: Dict[str, str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task_property_to_contact_field') }})
     task_template_uuid: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task_template_uuid') }})
@@ -19,5 +20,6 @@ class CampaignInput:
     timezone: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone') }})
     task_template: Optional[TaskTemplateInput] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('task_template'), 'exclude': lambda f: f is None }})
     paused: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paused'), 'exclude': lambda f: f is None }})
+    campaign_uuids: Optional[List[str]] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('campaign_uuids'), 'exclude': lambda f: f is CampaignInput.UNSET }})
     
 
