@@ -41,6 +41,8 @@ class Call:
     retry_delay_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('retry_delay_seconds'), 'exclude': lambda f: f is None }})
     scheduled_at: Optional[datetime] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduled_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is Call.UNSET }})
     previous_call_id: Optional[int] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('previous_call_id'), 'exclude': lambda f: f is Call.UNSET }})
+    retry_call_ids: Optional[List[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('retry_call_ids'), 'exclude': lambda f: f is None }})
+    r"""IDs of retry calls spawned from this call"""
     call_transferred: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('call_transferred'), 'exclude': lambda f: f is None }})
     
 
