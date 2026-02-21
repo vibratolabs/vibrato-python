@@ -20,6 +20,6 @@ class GetTranscriptRequest:
 class GetTranscriptResponse:
     http_meta: components_httpmetadata.HTTPMetadata = dataclasses.field(metadata={'dataclasses_json': { 'exclude': lambda f: True }})
     transcript: Optional[components_transcript.Transcript] = dataclasses.field(default=None)
-    r"""Transcript of the call."""
+    r"""Full current transcript snapshot for the call."""
     
 

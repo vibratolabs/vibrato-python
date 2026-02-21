@@ -427,7 +427,9 @@ class Calls:
     
     
     def get_transcript(self, id: str) -> operations.GetTranscriptResponse:
-        r"""Get transcript for a specific call"""
+        r"""Get transcript for a specific call
+        Returns the full current transcript snapshot for the call. For live incremental updates, subscribe to the websocket stream after fetching this snapshot.
+        """
         hook_ctx = HookContext(operation_id='getTranscript', oauth2_scopes=[], security_source=self.sdk_configuration.security)
         request = operations.GetTranscriptRequest(
             id=id,

@@ -350,7 +350,7 @@ if res.call is not None:
 
 ## get_transcript
 
-Get transcript for a specific call
+Returns the full current transcript snapshot for the call. For live incremental updates, subscribe to the websocket stream after fetching this snapshot.
 
 ### Example Usage
 
