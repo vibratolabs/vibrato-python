@@ -7,16 +7,6 @@ Use a snapshot-plus-stream pattern for reliable transcript state:
 
 This avoids missing messages across reconnects and process restarts.
 
-## Install
-
-```bash
-pip install -e ".[dev]"
-```
-
-Runtime dependency:
-
-- `websockets>=12.0`
-
 ## Quick Start (Async)
 
 ```python
