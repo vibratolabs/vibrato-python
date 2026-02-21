@@ -7,9 +7,9 @@ s = vibrato.Vibrato(
 )
 
 
-res = s.calls.list_calls()
+res = s.users.retrieve_current_user()
 
-if res.call_list is not None:
+if res.user is not None:
     # handle response
     pass
 

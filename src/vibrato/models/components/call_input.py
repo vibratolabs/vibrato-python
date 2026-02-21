@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
+import dateutil.parser
 from dataclasses_json import Undefined, dataclass_json
+from datetime import datetime
 from typing import List, Optional
 from vibrato import utils
 
@@ -10,11 +12,29 @@ from vibrato import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CallInput:
+    UNSET='__SPEAKEASY_UNSET__'
     country_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('country_code') }})
     phone_number: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phone_number') }})
     prompt: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prompt') }})
     locale: Optional[str] = dataclasses.field(default='en-us', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('locale'), 'exclude': lambda f: f is None }})
     labels: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('labels'), 'exclude': lambda f: f is None }})
     api_idempotency_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_idempotency_key'), 'exclude': lambda f: f is None }})
+    tags: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tags'), 'exclude': lambda f: f is None }})
+    r"""List of tags associated with the call"""
+    voice_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('voice_id'), 'exclude': lambda f: f is None }})
+    voice_clone_uuid: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('voice_clone_uuid'), 'exclude': lambda f: f is None }})
+    r"""Voice clone identifier from your account"""
+    leave_voicemail_message: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('leave_voicemail_message'), 'exclude': lambda f: f is None }})
+    voicemail_message: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('voicemail_message'), 'exclude': lambda f: f is CallInput.UNSET }})
+    handoff_condition: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('handoff_condition'), 'exclude': lambda f: f is CallInput.UNSET }})
+    handoff_phone_number_uuid: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('handoff_phone_number_uuid'), 'exclude': lambda f: f is CallInput.UNSET }})
+    handoff_phone_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('handoff_phone_number'), 'exclude': lambda f: f is None }})
+    r"""Full handoff phone number including country code (e.g. 17607916516)"""
+    retries: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('retries'), 'exclude': lambda f: f is None }})
+    retry_delay_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('retry_delay_seconds'), 'exclude': lambda f: f is None }})
+    scheduled_at: Optional[datetime] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('scheduled_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is CallInput.UNSET }})
+    outbound_twilio_phone_number_uuid: Optional[str] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_twilio_phone_number_uuid'), 'exclude': lambda f: f is CallInput.UNSET }})
+    outbound_twilio_phone_number: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('outbound_twilio_phone_number'), 'exclude': lambda f: f is None }})
+    r"""Full outbound phone number including country code (e.g. 17607916516)"""
     
 

@@ -28,9 +28,9 @@ s = vibrato.Vibrato(
 )
 
 
-res = s.calls.list_calls()
+res = s.users.retrieve_current_user()
 
-if res.call_list is not None:
+if res.user is not None:
     # handle response
     pass
 
@@ -40,10 +40,15 @@ if res.call_list is not None:
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
+### [users](docs/sdks/users/README.md)
+
+* [retrieve_current_user](docs/sdks/users/README.md#retrieve_current_user) - Retrieve current user profile
+
 ### [calls](docs/sdks/calls/README.md)
 
 * [list_calls](docs/sdks/calls/README.md#list_calls) - List all calls
 * [create_call](docs/sdks/calls/README.md#create_call) - Create a new call
+* [create_call_from_task_template](docs/sdks/calls/README.md#create_call_from_task_template) - Create a new call from a task template
 * [retrieve_call](docs/sdks/calls/README.md#retrieve_call) - Retrieve a specific call
 * [update_call](docs/sdks/calls/README.md#update_call) - Update an existing call
 * [delete_call](docs/sdks/calls/README.md#delete_call) - Delete a specific call
@@ -97,13 +102,13 @@ s = vibrato.Vibrato(
 
 res = None
 try:
-    res = s.calls.list_calls()
+    res = s.users.retrieve_current_user()
 
 except errors.SDKError as e:
     # handle exception
     raise(e)
 
-if res.call_list is not None:
+if res.user is not None:
     # handle response
     pass
 
@@ -132,9 +137,9 @@ s = vibrato.Vibrato(
 )
 
 
-res = s.calls.list_calls()
+res = s.users.retrieve_current_user()
 
-if res.call_list is not None:
+if res.user is not None:
     # handle response
     pass
 
@@ -153,9 +158,9 @@ s = vibrato.Vibrato(
 )
 
 
-res = s.calls.list_calls()
+res = s.users.retrieve_current_user()
 
-if res.call_list is not None:
+if res.user is not None:
     # handle response
     pass
 
@@ -198,9 +203,9 @@ s = vibrato.Vibrato(
 )
 
 
-res = s.calls.list_calls()
+res = s.users.retrieve_current_user()
 
-if res.call_list is not None:
+if res.user is not None:
     # handle response
     pass
 

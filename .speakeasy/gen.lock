@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 4917d4dd-5e68-4d79-a8a3-8b030c2718fc
 management:
-  docChecksum: 05b04dd070081f3c0e6557d9cf846341
+  docChecksum: 352a2cb41fabcb6f5d4544ccbcf36986
   docVersion: 0.0.1
   speakeasyVersion: 1.335.0
   generationVersion: 2.370.2
-  releaseVersion: 0.1.2
-  configChecksum: 3f167afe86faf521715dd5f2080a82f8
+  releaseVersion: 0.1.3
+  configChecksum: e5bf1c2fc43eb5e8f46d1171c4a2f239
 features:
   python:
     additionalDependencies: 0.1.0
@@ -23,6 +23,7 @@ features:
     sdkHooks: 0.1.0
 generatedFiles:
   - src/vibrato/sdkconfiguration.py
+  - src/vibrato/users.py
   - src/vibrato/calls.py
   - src/vibrato/tasktemplates.py
   - src/vibrato/campaigns.py
@@ -37,8 +38,10 @@ generatedFiles:
   - src/vibrato/utils/retries.py
   - src/vibrato/utils/utils.py
   - src/vibrato/models/errors/sdkerror.py
+  - src/vibrato/models/operations/retrievecurrentuser.py
   - src/vibrato/models/operations/listcalls.py
   - src/vibrato/models/operations/createcall.py
+  - src/vibrato/models/operations/createcallfromtasktemplate.py
   - src/vibrato/models/operations/retrievecall.py
   - src/vibrato/models/operations/updatecall.py
   - src/vibrato/models/operations/deletecall.py
@@ -60,10 +63,13 @@ generatedFiles:
   - src/vibrato/models/operations/retrievecontact.py
   - src/vibrato/models/operations/updatecontact.py
   - src/vibrato/models/operations/deletecontact.py
+  - src/vibrato/models/components/user.py
+  - src/vibrato/models/components/plan.py
+  - src/vibrato/models/components/httpmetadata.py
   - src/vibrato/models/components/calllist.py
   - src/vibrato/models/components/call.py
-  - src/vibrato/models/components/httpmetadata.py
   - src/vibrato/models/components/call_input.py
+  - src/vibrato/models/components/createfromtasktemplate.py
   - src/vibrato/models/components/transcript.py
   - src/vibrato/models/components/transcriptmessage.py
   - src/vibrato/models/components/tasktemplatelist.py
@@ -83,8 +89,10 @@ generatedFiles:
   - src/vibrato/models/errors/__init__.py
   - src/vibrato/models/operations/__init__.py
   - src/vibrato/models/components/__init__.py
+  - docs/models/operations/retrievecurrentuserresponse.md
   - docs/models/operations/listcallsresponse.md
   - docs/models/operations/createcallresponse.md
+  - docs/models/operations/createcallfromtasktemplateresponse.md
   - docs/models/operations/retrievecallrequest.md
   - docs/models/operations/retrievecallresponse.md
   - docs/models/operations/updatecallrequest.md
@@ -121,10 +129,13 @@ generatedFiles:
   - docs/models/operations/updatecontactresponse.md
   - docs/models/operations/deletecontactrequest.md
   - docs/models/operations/deletecontactresponse.md
+  - docs/models/components/user.md
+  - docs/models/components/plan.md
+  - docs/models/components/httpmetadata.md
   - docs/models/components/calllist.md
   - docs/models/components/call.md
-  - docs/models/components/httpmetadata.md
   - docs/models/components/callinput.md
+  - docs/models/components/createfromtasktemplate.md
   - docs/models/components/transcript.md
   - docs/models/components/transcriptmessage.md
   - docs/models/components/tasktemplatelist.md
@@ -145,6 +156,7 @@ generatedFiles:
   - docs/models/components/campaigncallinput.md
   - docs/models/components/security.md
   - docs/sdks/vibrato/README.md
+  - docs/sdks/users/README.md
   - docs/sdks/calls/README.md
   - docs/sdks/tasktemplates/README.md
   - docs/sdks/campaigns/README.md

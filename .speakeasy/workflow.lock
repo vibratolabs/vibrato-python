@@ -2,8 +2,8 @@ speakeasyVersion: 1.335.0
 sources:
     vibrato-pub-api:
         sourceNamespace: vibrato-pub-api
-        sourceRevisionDigest: sha256:7e6199c3dba5fbc88e7abf8b9f657f5fa54e44fc9b7aa2d7c827146c8312d10b
-        sourceBlobDigest: sha256:978729e6147d09562fc8a4aad7c73b9dc01959d9226ed69a58876c32396f7200
+        sourceRevisionDigest: sha256:413e3360cef6a5a1259d9ec4e8222a17e078210efd0c979cb3b75f5bee891249
+        sourceBlobDigest: sha256:2797631ed3c41450d4a8b840a82fd07b5e73e73ed9350882ab13d4ac15a7743e
         tags:
             - latest
 targets:
@@ -16,12 +16,12 @@ targets:
     vibrato-python:
         source: vibrato-pub-api
         sourceNamespace: vibrato-pub-api
-        sourceRevisionDigest: sha256:7e6199c3dba5fbc88e7abf8b9f657f5fa54e44fc9b7aa2d7c827146c8312d10b
-        sourceBlobDigest: sha256:978729e6147d09562fc8a4aad7c73b9dc01959d9226ed69a58876c32396f7200
+        sourceRevisionDigest: sha256:413e3360cef6a5a1259d9ec4e8222a17e078210efd0c979cb3b75f5bee891249
+        sourceBlobDigest: sha256:2797631ed3c41450d4a8b840a82fd07b5e73e73ed9350882ab13d4ac15a7743e
         outLocation: .
 workflow:
     workflowVersion: 1.0.0
-    speakeasyVersion: latest
+    speakeasyVersion: 1.335.0
     sources:
         vibrato-pub-api:
             inputs:

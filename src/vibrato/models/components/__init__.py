@@ -10,8 +10,10 @@ from .campaigncall_input import *
 from .campaignlist import *
 from .contact import *
 from .contactlist import *
+from .createfromtasktemplate import *
 from .dailyavailability import *
 from .httpmetadata import *
+from .plan import *
 from .security import *
 from .tasktemplate import *
 from .tasktemplate_input import *
@@ -19,5 +21,6 @@ from .tasktemplatelist import *
 from .tasktemplateproperty import *
 from .transcript import *
 from .transcriptmessage import *
+from .user import *
 
-__all__ = ["Call","CallInput","CallList","Campaign","CampaignCall","CampaignCallInput","CampaignInput","CampaignList","Contact","ContactInput","ContactList","CustomFields","DailyAvailability","Day","HTTPMetadata","Security","TaskTemplate","TaskTemplateInput","TaskTemplateList","TaskTemplateProperty","Transcript","TranscriptMessage","ValidationErrors"]
+__all__ = ["Call","CallInput","CallList","Campaign","CampaignCall","CampaignCallInput","CampaignInput","CampaignList","Contact","ContactInput","ContactList","CreateFromTaskTemplate","CustomFields","DailyAvailability","Day","HTTPMetadata","Plan","Security","TaskTemplate","TaskTemplateInput","TaskTemplateList","TaskTemplateProperty","Transcript","TranscriptMessage","User","ValidationErrors"]
