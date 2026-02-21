@@ -1,0 +1,4 @@
+src/vibrato/transcript_stream.py
+tests/
+docs/transcript-streaming.md
+Makefile

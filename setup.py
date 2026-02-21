@@ -31,10 +31,13 @@ setuptools.setup(
         "typing-inspect>=0.9.0",
         "typing_extensions>=4.7.1",
         "urllib3>=1.26.18",
+        "websockets>=12.0",
     ],
     extras_require={
         "dev": [
             "pylint==3.1.0",
+            "pytest>=7.0",
+            "pytest-asyncio>=0.23",
         ],
     },
     package_dir={'': 'src'},
